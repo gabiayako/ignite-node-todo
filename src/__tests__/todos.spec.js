@@ -4,7 +4,7 @@ const { validate } = require("uuid");
 const app = require("../");
 
 describe("Todos", () => {
-  it.only("should be able to list all user's todo", async () => {
+  it("should be able to list all user's todo", async () => {
     const userResponse = await request(app).post("/users").send({
       name: "John Doe",
       username: "user1",
